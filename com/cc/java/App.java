@@ -9,16 +9,19 @@ public class App {
         Worker worker = new Worker();
         Drone drone = new Drone();
 
-        output(queen.doYourJob());
-        output(queen.fly());
+        pollObj(queen);
+        pollObj(worker);
+        pollObj(drone);
 
-        output(worker.doYourJob());
-        output(worker.fly());
+           }
 
-        output(drone.doYourJob());
-        output(drone.fly());
-
-        
+    //neue Methode fürs zusammenfassen: 
+   // Parameter obj von Typ Queen
+   //geändert zu HoneyBee, weil es auch für worker und drone gelten soll
+   //nennt sich Polymorphie
+    private static void pollObj(HoneyBee obj) {
+        output(obj.doYourJob());
+        output(obj.fly());
     }
 
    
